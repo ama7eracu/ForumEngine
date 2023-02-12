@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Interfaces" />
+      <Folder Include="Section\Commands" />
+      <Folder Include="Section\Queries" />
+      <Folder Include="Topic\Queries" />
+      <Folder Include="UserComments\Commands" />
+      <Folder Include="UserComments\Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="11.1.0" />
+    </ItemGroup>
+
+</Project>

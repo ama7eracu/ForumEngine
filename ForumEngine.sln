@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForumEngine.Domain", "ForumEngine.Domain", "{C02BFCFE-99A7-4628-A5DE-FC3794E80A0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForumEngine.Application", "ForumEngine.Application", "{EA485CEF-6D27-4CD5-AEEA-B0981ED6ABD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForumEngine.Persistence", "ForumEngine.Persistence", "{EB2469EA-7386-4712-A3C3-52133005DA0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForumEngine.Tests", "ForumEngine.Tests", "{B4A4BC9E-8621-41B9-828E-5954FB5C1F14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ForumEngine.WebApi", "ForumEngine.WebApi", "{5433C568-7D5C-4900-8759-0EFF06F7E73D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumEngine.Application", "ForumEngine.Application\ForumEngine.Application.csproj", "{E85C578C-15EF-4561-8704-160ADE6A1F80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumEngine.Domain", "ForumEngine.Domain\ForumEngine.Domain.csproj", "{1561FA6E-68E9-4BC6-A259-09243FD121A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E85C578C-15EF-4561-8704-160ADE6A1F80} = {EA485CEF-6D27-4CD5-AEEA-B0981ED6ABD0}
+		{1561FA6E-68E9-4BC6-A259-09243FD121A0} = {C02BFCFE-99A7-4628-A5DE-FC3794E80A0D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E85C578C-15EF-4561-8704-160ADE6A1F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85C578C-15EF-4561-8704-160ADE6A1F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85C578C-15EF-4561-8704-160ADE6A1F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85C578C-15EF-4561-8704-160ADE6A1F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1561FA6E-68E9-4BC6-A259-09243FD121A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1561FA6E-68E9-4BC6-A259-09243FD121A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1561FA6E-68E9-4BC6-A259-09243FD121A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1561FA6E-68E9-4BC6-A259-09243FD121A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
