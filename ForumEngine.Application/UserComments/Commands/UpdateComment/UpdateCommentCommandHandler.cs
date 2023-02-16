@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ForumEngine.Application.UserComments.Commands.UpdateComment;
 
-public class UpdateCommentCommandHandler:IRequestHandler<UpdateCommentCommand>
+public class UpdateCommentCommandHandler : IRequestHandler<UpdateCommentCommand>
 {
     private readonly IForumEngineDbContext _context;
 
@@ -13,7 +13,7 @@ public class UpdateCommentCommandHandler:IRequestHandler<UpdateCommentCommand>
     {
         _context = context;
     }
-    
+
     public async Task<Unit> Handle(UpdateCommentCommand request, CancellationToken cancellationToken)
     {
         var entity = await _context.UserComments.FirstOrDefaultAsync(comment =>
@@ -24,11 +24,11 @@ public class UpdateCommentCommandHandler:IRequestHandler<UpdateCommentCommand>
         {
             throw new NotFoundException(nameof(Domain.UserComment), request.Id);
         }
-        
-        entity.EditTime=DateTime.Today;
+
+        entity.EditTime = DateTime.Today;
         entity.Comment = request.Comment;
 
-        await  _context.SaveChangesAsync(cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
 
         return Unit.Value;
     }

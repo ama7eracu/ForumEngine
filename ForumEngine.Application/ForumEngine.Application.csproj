@@ -9,12 +9,12 @@
     <ItemGroup>
       <Folder Include="Section\Commands" />
       <Folder Include="Section\Queries" />
-      <Folder Include="Topic\Queries\GetAllTopics" />
       <Folder Include="Topic\Queries\GetTopic" />
-      <Folder Include="UserComments\Queries\GetComment" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
       <PackageReference Include="MediatR" Version="11.1.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
