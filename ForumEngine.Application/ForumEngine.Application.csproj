@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Section\Commands" />
       <Folder Include="Section\Queries" />
       <Folder Include="Topic\Queries\GetTopic" />
     </ItemGroup>

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ForumEngine.Application.Topic.Queries.GetAllSectionTopics;
 
-public class GetAllSectionTopicsQueryHandler:IRequestHandler<GetAllSectionTopicsQuery,GetAllSectionTopicsVm>
+public class GetAllSectionTopicsQueryHandler : IRequestHandler<GetAllSectionTopicsQuery, GetAllSectionTopicsVm>
 {
     private readonly IForumEngineDbContext _context;
     private readonly IMapper _mapper;
@@ -15,8 +15,8 @@ public class GetAllSectionTopicsQueryHandler:IRequestHandler<GetAllSectionTopics
         _mapper = mapper;
         _context = context;
     }
-    
-    public async Task<GetAllSectionTopicsVm> Handle(GetAllSectionTopicsQuery request, 
+
+    public async Task<GetAllSectionTopicsVm> Handle(GetAllSectionTopicsQuery request,
         CancellationToken cancellationToken)
     {
         var topicsList = await _context.Topics.Where(Topic =>

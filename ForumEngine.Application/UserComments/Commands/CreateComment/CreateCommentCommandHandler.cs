@@ -1,8 +1,9 @@
 using ForumEngine.Application.Interfaces;
 using MediatR;
+
 namespace ForumEngine.Application.UserComments.Commands.CreateComment;
 
-public class CreateCommentCommandHandler:IRequestHandler<CreateCommentCommand,Guid>
+public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Guid>
 {
     private readonly IForumEngineDbContext _context;
 
@@ -10,7 +11,7 @@ public class CreateCommentCommandHandler:IRequestHandler<CreateCommentCommand,Gu
     {
         _context = context;
     }
-    
+
     public async Task<Guid> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
     {
         var comment = new Domain.UserComment
@@ -24,9 +25,9 @@ public class CreateCommentCommandHandler:IRequestHandler<CreateCommentCommand,Gu
             UserId = request.UserId
         };
 
-       await _context.UserComments.AddAsync(comment, cancellationToken);
-       await _context.SaveChangesAsync(cancellationToken);
+        await _context.UserComments.AddAsync(comment, cancellationToken);
+        await _context.SaveChangesAsync(cancellationToken);
 
-       return comment.UserId;
+        return comment.UserId;
     }
 }

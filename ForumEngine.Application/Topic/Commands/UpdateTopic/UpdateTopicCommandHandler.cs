@@ -30,7 +30,7 @@ public class UpdateTopicCommandHandler : IRequestHandler<UpdateTopicCommand>
         entity.EditTime = DateTime.Now;
 
         await _context.SaveChangesAsync(cancellationToken);
-        
+
         return Unit.Value;
     }
 }

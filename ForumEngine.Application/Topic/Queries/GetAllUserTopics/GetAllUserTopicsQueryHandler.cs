@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ForumEngine.Application.Topic.Queries.GetAllUserTopics;
 
-public class GetAllUserTopicsQueryHandler:IRequestHandler<GetAllUserTopicsQuery,GetAllUserTopicsVm>
+public class GetAllUserTopicsQueryHandler : IRequestHandler<GetAllUserTopicsQuery, GetAllUserTopicsVm>
 {
     private readonly IForumEngineDbContext _context;
     private readonly IMapper _mapper;
@@ -22,7 +22,7 @@ public class GetAllUserTopicsQueryHandler:IRequestHandler<GetAllUserTopicsQuery,
         var topics = await _context.Topics.Where(topic => topic.AuthorId == request.UserId)
             .ToListAsync(cancellationToken);
 
-        var topicsDto = topics.Select(topic => 
+        var topicsDto = topics.Select(topic =>
             _mapper.Map<GetAllUserTopicsDto>(topic)).ToList();
 
         return new GetAllUserTopicsVm {Topics = topicsDto};
